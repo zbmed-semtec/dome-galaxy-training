@@ -1,0 +1,71 @@
+{
+  "contextTM": {
+    "@context": "https://schema.org",
+    "dc:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/", 
+    "@type": "LearningResource"
+  },
+
+  "common": {
+    "about": [
+      {
+        "@type": "DefinedTerm", 
+        "@id": "http://edamontology.org/topic_0091",
+        "inDefinedTermSet": "http://edamontology.org",
+        "termCode": "topic_0091",
+        "name": "Bioinformatics",
+        "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_0091"
+      }, {
+        "@type": "DefinedTerm", 
+        "@id": "http://edamontology.org/topic_4019",
+        "inDefinedTermSet": "http://edamontology.org",
+        "termCode": "topic_4019",
+        "name": "Biosciences",
+        "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_4019"
+      }, {
+        "@type": "DefinedTerm", 
+        "@id": "http://edamontology.org/topic_3474",
+        "inDefinedTermSet": "http://edamontology.org",
+        "termCode": "topic_3474",
+        "name": "Machine learning",
+        "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3474"
+      }
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": ["machine learning enthusiasts"]
+    },
+    "author": [
+      {
+          "@type": "Person",
+          "name": "Leyla Jael Castro"
+      },
+      {
+          "@type": "Person",
+          "name": "Fotis Psomopoulos"
+      },
+      {
+          "@type": "Person",
+          "name": "Silvio Tossato"
+      },
+      {
+          "@type": "Person",
+          "name": "Jennifer Harrow"
+      }
+    ],
+    "educationalLevel": "beginner",
+    "inLanguage": "en",
+    "learningResourceType": ["presentation"],
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+    "dateCreated": "2022-05-30",
+    "version": "1.0"
+    },
+
+  "lesson1": {
+    "@id": "https://doi.org/",
+    "name": "",
+    "keywords": "",
+    "description": "",
+    "teaches": []
+  } 
+
+}

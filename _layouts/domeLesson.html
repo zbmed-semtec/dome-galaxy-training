@@ -1,0 +1,139 @@
+---
+layout: default
+---
+
+<script src="../javascript/util.js"></script>
+
+<h1>{{ page.lesson.name }}</h1>
+
+<div id="bms_infobox">
+  <ul>
+    {% if page.lesson.doi %}
+    <li><strong>DOI: </strong><a href="htmls://doi.org/{{ page.lesson.doi }}">{{ page.lesson.doi }}</a></li>
+    {% endif %}
+    <li><strong>Lesson title: </strong>{{ page.lesson.name }}</li>
+    <li><strong>Keywords: </strong>{{ page.lesson.keywords }}</li>
+    <li><strong>Objective/Description: </strong>{{ page.lesson.description }}</li>
+    <li>
+      <span><strong>Learning outcomes: </strong></span>
+      <ul>
+        {% for outcome in page.lesson.teaches %}
+        <li>{{ outcome | remove: '"' }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+    <li>
+      <span><strong>Prerequisites: </strong></span>
+      <ul>
+        {% for requirement in page.lesson.requires %}
+        <li>{{ requirement | remove: '"' }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% if page.lesson.questions %}
+    <li>
+      <span><strong>Guiding questions: </strong></span>
+      <ul>
+        {% for question in page.lesson.questions %}
+        <li>{{ question | remove: '"' }}</li>
+        {% endfor %}
+      </ul>
+    </li>
+    {% endif %}
+  </ul>
+  {% if page.lesson.doi %}
+  <li><strong>Time required: </strong>{{ page.lesson.duration }}</li>
+  {% endif %}
+</div>
+
+{{ content }}
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "dc:conformsTo": "https://bioschemas.org/profiles/TrainingMaterial/0.9-DRAFT-2020_12_08/", 
+    "@type": "LearningResource",
+
+    {% if page.lesson.doi %}
+    "@id": "htmls://doi.org/{{ page.lesson.doi }}"
+    {% endif %}
+  
+    "about": [
+      {
+        "@type": "DefinedTerm", 
+        "@id": "http://edamontology.org/topic_0091",
+        "inDefinedTermSet": "http://edamontology.org",
+        "termCode": "topic_0091",
+        "name": "Bioinformatics",
+        "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_0091"
+      }, {
+        "@type": "DefinedTerm", 
+        "@id": "http://edamontology.org/topic_4019",
+        "inDefinedTermSet": "http://edamontology.org",
+        "termCode": "topic_4019",
+        "name": "Biosciences",
+        "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_4019"
+      }, {
+        "@type": "DefinedTerm", 
+        "@id": "http://edamontology.org/topic_3474",
+        "inDefinedTermSet": "http://edamontology.org",
+        "termCode": "topic_3474",
+        "name": "Machine learning",
+        "url": "https://bioportal.bioontology.org/ontologies/EDAM/?p=classes&conceptid=http%3A%2F%2Fedamontology.org%2Ftopic_3474"
+      }
+    ],
+    "audience": {
+      "@type": "Audience",
+      "audienceType": ["machine learning enthusiasts"]
+    },
+    "author": [
+      {
+          "@type": "Person",
+          "name": "Leyla Jael Castro"
+      },
+      {
+          "@type": "Person",
+          "name": "Fotis Psomopoulos"
+      },
+      {
+          "@type": "Person",
+          "name": "Silvio Tossato"
+      },
+      {
+          "@type": "Person",
+          "name": "Jennifer Harrow"
+      }
+    ],
+    "educationalLevel": "beginner",
+    "inLanguage": "en",
+    "learningResourceType": ["presentation"],
+    "license": "https://creativecommons.org/licenses/by/4.0/",
+
+    {% if page.lesson.dateCreated %}
+    "dateCreated": "{{ page.lesson.dateCreated }}"
+    {% else %}
+    "dateCreated": "2020-12-19",
+    {% endif %}
+
+    {% if page.lesson.dateModfied %}
+    "dateCreated": "{{ page.lesson.dateModfied }}"
+    {% endif %}
+
+    {% if page.lesson.datePublished %}
+    "dateCreated": "{{ page.lesson.datePublished }}"
+    {% endif %}
+    
+    {% if page.lesson.datePublished %}
+    "dateCreated": "{{ page.lesson.datePublished }}"
+    {% else %}
+    "version": "1.0",
+    {% endif %}
+  
+    "name": "{{ page.lesson.name }}",
+    "keywords": "{{ page.lesson.keywords }}",
+    "description": "{{ page.lesson.description }}",
+    "teaches": [
+      {{ page.lesson.teaches | join: ","}}
+    ]
+  }  
+</script>

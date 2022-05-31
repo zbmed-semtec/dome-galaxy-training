@@ -1,0 +1,9 @@
+title: "DOME recommendations with a Galaxy tutorial as a use case"
+remote_theme: pmarsceill/just-the-docs
+logo: ./dome.gif
+search_enabled: false
+aux_links:
+  "GitHub": "//github.com/zbmed-semtec/dome-galaxy-training"
+aux_links_new_tab: true
+
+description: "Training materials about the DOME recommendations with a Galazy tutorial as a use case "
