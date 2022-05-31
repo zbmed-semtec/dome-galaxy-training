@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Introduction
+title: Warm-up
 nav_order: 10
 ---
 

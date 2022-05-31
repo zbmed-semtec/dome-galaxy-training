@@ -1,7 +1,7 @@
 ---
 layout: domeLesson
-title: DOME tutorial
-nav_order: 1
+title: Introduction
+nav_order: 2
 
 
 lesson:
@@ -22,6 +22,6 @@ lesson:
 ---
 
 ## How this tutorial is organized
-1. [Motivation via a practical exercise](./Part1.md) (12 minutes)
+1. [Warm-up via a practical exercise](./Part1.md) (12 minutes)
 2. [DOME recommendations](./Part2.md) (15 minutes)
 3. [Wrap-up](./Wrapup.md) (3 minutes)

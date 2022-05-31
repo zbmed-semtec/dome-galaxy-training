@@ -1,8 +1,9 @@
 ---
 layout: default
-title: Home
+title: DOME tutorial at ELIXIR All hands 2022
 nav_order: 1
 permalink: /
+
 ---
 
 <table style="text-align:center">
